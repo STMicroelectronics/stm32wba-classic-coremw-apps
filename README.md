@@ -2,15 +2,15 @@
 
 ![latest tag](https://img.shields.io/github/v/tag/STMicroelectronics/stm32wba-classic-coremw-apps.svg?color=brightgreen)
 
-![freertos](https://img.shields.io/badge/freertos-v10.6.2-blue.svg) ![fatfs](https://img.shields.io/badge/fatfs-R0.15-blue.svg)
+![fatfs](https://img.shields.io/badge/fatfs-R0.15-blue.svg)
 
 ## Description
 
 **STM32Cube** is an STMicroelectronics original initiative to ease developers' life by reducing efforts, time and cost.
 
-**Classic CoreMW** is a collection of middleware stacks and associated applications allowing RTOS management, File System operations and connectivity through USB and Ethernet. It is based on:
+**Classic CoreMW** is a collection of middleware stacks and associated applications allowing RTOS management, File System operations and connectivity through USB. It is based on:
 * ST's proprietary stacks: ST USB Device and ST USB Host
-* Third parties' stacks: FreeRTOS, FatFS, and LwIP
+* Third parties' stacks: FatFS
 
 This package is **exclusively** published on GitHub (and is neither available in STM32CubeMX nor STM32CubeIDE available on www.st.com).
 It contains the integration of the Classic CoreMW stacks with *STM32WBA* devices, allowing users to get quick access to pre-built projects integrating them.
@@ -19,14 +19,21 @@ It contains the integration of the Classic CoreMW stacks with *STM32WBA* devices
 
  * The repository containing this package has been created using the `git submodule` command. Please refer to the ["How to use"](README.md#how-to-use) section explaining how to clone this repository and how to get the latest updates.
 
+## Release note
+
+Details about the content of this release are available in the release note [here](https://htmlpreview.github.io/?https://github.com/STMicroelectronics/stm32wba-classic-coremw-apps/blob/main/Release_Notes.html).
+
 ## List of applications
 
 The **STM32WBA Classic CoreMW** package contains the following applications:
 
-Middleware    | Application                        | Short Description
---------------|------------------------------------|------------------------------------------------------------------------
-FatFs	        | FatFs_RAMDISK_Standalone	         | Shows how to use STM32Cube firmware with FatFs middleware component as a generic FAT file system module
-
+Middleware    | Application                            | Short Description
+--------------|----------------------------------------|------------------------------------------------------------------------
+FatFs	      | FatFs_RAMDISK_Standalone               | Shows a typical application where the STM32 MCU write and read back a Fat Format text file from RAMDISK
+ST USB Device | HID_Standalone                         | Shows a typical application where the STM32 MCU is enumerated as a HID device
+ST USB Device | CDC_Standalone                         | Shows a typical application where the STM32 MCU is enumerated as a CDC device
+ST USB Host   | HID_Standalone                         | Shows how to use USB host application based on the Human Interface Class (HID) to connect a mouse or a keyboard
+ST USB Host   | CDC_Standalone                         | Shows how to use USB host application based on the Communication Device Class (CDC) to communicate with a usb flash disk
 
 #### *Note*
  * *FreeRTOS* Middleware and examples are delivered on STM32WBA in the form of X-CUBE-FREERTOS that is available from [st.com](https://www.st.com/en/embedded-software/x-cube-freertos.html), from [GitHub](https://github.com/STMicroelectronics/x-cube-freertos) and from STM32CubeMX.
@@ -35,13 +42,14 @@ FatFs	        | FatFs_RAMDISK_Standalone	         | Shows how to use STM32Cube f
 ## Boards available
 
  * STM32WBA
-   * [NUCLEO-WBA52CG](https://www.st.com/en/evaluation-tools/nucleo-wba52cg.html)
+   * [NUCLEO-WBA55CG](https://www.st.com/en/evaluation-tools/nucleo-wba55cg.html)
+   * [NUCLEO-WBA65RI](https://www.st.com/en/evaluation-tools/nucleo-wba65ri.html)
 
 ## Development Toolchains and Compilers
 
- * IAR Embedded Workbench for ARM (EWARM) toolchain **9.20.1** + ST-LINKV3.Patch available [here](https://github.com/STMicroelectronics/STM32CubeWBA/tree/main/Utilities/PC_Software)
+ * IAR Embedded Workbench for ARM (EWARM) toolchain **9.60.3** + ST-LINKV3.Patch available [here](https://github.com/STMicroelectronics/STM32CubeWBA/tree/main/Utilities/PC_Software)
  * RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.39 + ST-LINKV3.Patch available [here](https://github.com/STMicroelectronics/STM32CubeWBA/tree/main/Utilities/PC_Software)
- * [STM32CubeIDE **V1.17.0**](https://www.st.com/en/development-tools/stm32cubeide.html) + ST-LINKV3
+ * [STM32CubeIDE **V2.0.0**](https://www.st.com/en/development-tools/stm32cubeide.html) + ST-LINKV3
 
 
 ## Dependencies
@@ -51,12 +59,13 @@ This package has been developed and tested using the list of components detailed
 Name                       |   Version
 ---------------------------|---------------
 Cortex-M CMSIS             |   V5.9.0
-STM32WBAxx CMSIS           |   V1.5.0
-STM32WBAxx HAL             |   V1.5.0
-BSP STM32WBAxx NUCLEO      |   V1.0.3
+STM32WBAxx CMSIS           |   V1.7.0
+STM32WBAxx HAL             |   V1.7.0
+BSP STM32WBAxx NUCLEO      |   V1.1.0
 BSP Common                 |   V7.3.0
 FatFS                      |   R0.15
-FreeRTOS                   |   V10.6.2
+STM32 USB Device Library   |   V2.11.4
+STM32 USB Host Library     |   V3.5.3
 
 ## How to use
 

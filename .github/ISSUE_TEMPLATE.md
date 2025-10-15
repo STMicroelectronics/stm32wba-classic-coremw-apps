@@ -8,8 +8,8 @@ assignees: ''
 
 **Caution**
 
-The Issues are strictly limited for the reporting of problem encountered with the software provided in this project.
-For any other problem related to the STM32 product, the performance, the hardware characteristics and boards, the tools the environment in general, please post your report to the **ST Community** in the STM32 MCUs dedicated [page](https://community.st.com/s/topic/0TO0X000000BSqSWAW/stm32-mcus).
+The Issues are strictly limited to reporting problems encountered or proposing enhancements with the software provided within this repository.
+For any other aspect related to the microcontroller itself, the boards, the ecosystem, or other aspects in general, please refer to the [CONTRIBUTING.md](../CONTRIBUTING.md#3-support-requests-and-questions) guide.
 
 **Describe the set-up**
 
