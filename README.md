@@ -2,7 +2,7 @@
 
 ![latest tag](https://img.shields.io/github/v/tag/STMicroelectronics/stm32wba-classic-coremw-apps.svg?color=brightgreen)
 
-![fatfs](https://img.shields.io/badge/fatfs-R0.15-blue.svg)
+![fatfs](https://img.shields.io/badge/fatfs-v0.15-blue.svg) ![usb_device](https://img.shields.io/badge/usb_device-v2.11.5-blue.svg) ![usb_host](https://img.shields.io/badge/usb_host-v3.5.4-blue.svg)
 
 ## Description
 
@@ -44,12 +44,13 @@ ST USB Host   | CDC_Standalone                         | Shows how to use USB ho
  * STM32WBA
    * [NUCLEO-WBA55CG](https://www.st.com/en/evaluation-tools/nucleo-wba55cg.html)
    * [NUCLEO-WBA65RI](https://www.st.com/en/evaluation-tools/nucleo-wba65ri.html)
+   * [NUCLEO-WBA25CE]
 
 ## Development Toolchains and Compilers
 
  * IAR Embedded Workbench for ARM (EWARM) toolchain **9.60.3** + ST-LINKV3.Patch available [here](https://github.com/STMicroelectronics/STM32CubeWBA/tree/main/Utilities/PC_Software)
  * RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.39 + ST-LINKV3.Patch available [here](https://github.com/STMicroelectronics/STM32CubeWBA/tree/main/Utilities/PC_Software)
- * [STM32CubeIDE **V2.0.0**](https://www.st.com/en/development-tools/stm32cubeide.html) + ST-LINKV3
+ * [STM32CubeIDE **V2.1.0**](https://www.st.com/en/development-tools/stm32cubeide.html) + ST-LINKV3
 
 
 ## Dependencies
@@ -58,14 +59,14 @@ This package has been developed and tested using the list of components detailed
 
 Name                       |   Version
 ---------------------------|---------------
-Cortex-M CMSIS             |   V5.9.0
-STM32WBAxx CMSIS           |   V1.7.0
-STM32WBAxx HAL             |   V1.7.0
-BSP STM32WBAxx NUCLEO      |   V1.1.0
+Cortex-M CMSIS             |   v5.9.0_fix_620_dsp_v1.10.0_nn_v3.1.0_no_doc
+STM32WBAxx CMSIS           |   V1.9.0
+STM32WBAxx HAL             |   V1.9.0
+BSP STM32WBAxx NUCLEO      |   V1.2.0
 BSP Common                 |   V7.3.0
 FatFS                      |   R0.15
-STM32 USB Device Library   |   V2.11.4
-STM32 USB Host Library     |   V3.5.3
+STM32 USB Device Library   |   V2.11.5
+STM32 USB Host Library     |   V3.5.4
 
 ## How to use
 
